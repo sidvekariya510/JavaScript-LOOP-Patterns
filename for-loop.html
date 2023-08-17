@@ -463,23 +463,73 @@
         //  *     *
 
         var z = "&nbsp "
-   
+
         var m = 5;
         for (i = 1; i < 5; i++) {
             for (j = 1; j <= m - 1; j++) {
-                document.write(z);
+                document.write(j);
             }
             m--;
             for (k = 1; k <= 2 * i - 1; k++) {
                 if (k == 1 || k == 2 * i - 1)
-                    document.write('*');
+                    document.write(k);
 
                 else
-                    document.write(z);
+                    document.write(k);
             }
-            
+
             document.write('<br>');
         }
+
+        // or method 2
+        var z = "&nbsp "
+        for (i = 1; i <= 4; i++) {
+            for (j = i; j <= 4; j++) {
+                if (j < 4) {
+                    document.write(z);
+                } else {
+                    document.write('*');
+                }
+            }
+
+            for (j = i; j > 1; j--) {
+                if (j < 4) {
+                    document.write(z);
+                } else {
+                    document.write(z);
+                }
+            }
+
+            for (j = 2; j <= 4; j++) {
+                if (j != i) {
+                    document.write(z);
+                } else {
+                    document.write('*');
+                }
+            }
+            document.write('<br>');
+        }
+    </script>
+
+    <br>
+    <h1>Task21</h1>
+    <script>
+        // 1        
+        // 2 3      
+        // 4 5 6    
+        // 7 8 9 10
+        // 1112131415
+
+        var z = "&nbsp "
+        for (i = 1; i <= 5; i++) {
+
+            for (j = i; j <= 15; j++) {
+                document.write(j);
+            }
+            document.write('<br>');
+        }
+
+
     </script>
 </body>
 
